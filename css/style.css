@@ -485,6 +485,39 @@ address .link:focus {
   background-color: var(--accent-color);
   color: var(--primery-bgc-color);
 }
+.footer-form {
+  margin-left: 93px;
+}
+.form-text {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primery-bgc-color);
+  margin-bottom: 20px;
+}
+.footer-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 200px;
+  height: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--primery-bgc-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.footer-icon-form {
+  margin-left: 10px;
+}
+
 /******************************Modal window*********************************************************/
 .backdrop {
   position: fixed;
