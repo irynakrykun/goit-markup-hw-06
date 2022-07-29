@@ -514,6 +514,7 @@ address .link:focus {
   cursor: pointer;
   margin-left: 12px;
 }
+
 .footer-icon-form {
   margin-left: 10px;
 }
@@ -552,13 +553,14 @@ address .link:focus {
   pointer-events: none;
 }
 .modal {
+  padding: 40px 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0);
 
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: var(--primery-bgc-color);
   opacity: 1;
   border-radius: 4px;
@@ -594,20 +596,23 @@ address .link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
+.modal-form {
+  text-align: center;
+}
 
 .modal-icon {
   fill: currentColor;
 }
-.modal-form {
-  align-items: center;
+
+.modal-registration-form {
   width: 100%;
-  padding-left: 41px;
-  padding-top: 40px;
-  padding-right: 39px;
-  padding-bottom: 40px;
+  display: block;
+
+  margin-bottom: 20px;
 }
 
 .modal-form-text {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -619,16 +624,17 @@ address .link:focus {
 .form-group {
   display: block;
   position: relative;
-  width: 448px;
-  height: 40px;
   margin-bottom: 28px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }
 
 .form-label {
   display: block;
+  text-align: left;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -636,16 +642,83 @@ address .link:focus {
   color: var(--primery-text-color);
 }
 .form-input {
+  display: block;
   width: 100%;
   height: 40px;
-  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 40px;
+  outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: fill var(--animation), border var(--animation);
+}
+
+.form-input:focus + .form-icon,
+.form-input:hover + .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+
+  fill: var(--title-text-color);
+}
+.form-coment {
+  display: inline-block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.checkbox-label-input:checked + .checkbox-label-icon .checkbox-label-uncheck {
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.checkbox-label-check {
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.checkbox-label-input:checked + .checkbox-label-icon .checkbox-label-check {
+  opacity: 1;
+}
+
+.checkbox-text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  text-underline-position: under;
 }
 
 .modal-form-btn {
-  display: block;
+  display: inline-flex;
   padding: 10px 55px;
   width: 200px;
   height: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
   align-items: center;
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -660,16 +733,9 @@ address .link:focus {
   background-color: var(--accent-color);
 }
 
-.form-icon {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  background-color: tomato;
-  transform: translateY(-50%);
-}
-
 /*********************************************Portfolio********************************************/
 .btn {
+  display: block;
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
@@ -680,6 +746,7 @@ address .link:focus {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  margin-bottom: 40px;
 
   transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }

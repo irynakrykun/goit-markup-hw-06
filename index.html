@@ -570,21 +570,62 @@
           </svg>
         </button>
 
-        <form class="modal-form" name="modal-form" autocomplete="off" novalidate></form>
-        <p class="modal-form-text">Оставьте свои данные, мы вам перезвоним</p>
-        <label class="form-group">
-          <span class="form-label">Имя</span>
-          <svg class="form-icon" width="18" height="18">
-            <use href="./images/icons.svg#person-2"></use>
-          </svg>
-          <input class="form-input" type="text" name="user-name" />
-        </label>
+        <form class="modal-form" name="modal-form" autocomplete="off" novalidate>
+          <p class="modal-form-text">Оставьте свои данные, мы вам перезвоним</p>
+          <div class="modal-registration-form" role="group">
+            <label class="form-group">
+              <span class="form-label">Имя</span>
+              <input class="form-input" type="text" name="user-name" />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#person-2"></use>
+              </svg>
+            </label>
 
-        <label for="">
-          <input type="checkbox" name="" id="" />
-          <span>Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
-        </label>
-        <button class="modal-form-btn" type="submit">Отправить</button>
+            <label class="form-group">
+              <span class="form-label">Телефон</span>
+              <input class="form-input" type="tel" name="phone" />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone-black"></use>
+              </svg>
+            </label>
+
+            <label class="form-group">
+              <span class="form-label">Почта</span>
+              <input class="form-input" type="email" name="email" />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </label>
+            <label class="form-group">
+              <span class="form-label">Коментар</span>
+              <textarea
+                сlass="form-coment"
+                name="coment"
+                rows="5"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
+          </div>
+
+          <label class="checkbox-label">
+            <input
+              class="checkbox-label-input visually-hidden"
+              type="checkbox"
+              name="topic"
+              value="checkbox"
+            />
+            <svg class="checkbox-label-icon" width="16" height="15">
+              <use class="checkbox-label-uncheck" href="./images/icons.svg#uncheck"></use>
+              <use class="checkbox-label-check" href="./images/icons.svg#icon-check-2"></use>
+            </svg>
+            <span class="checkbox-text"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#" class="colortext">Условия договора</a></span
+            >
+          </label>
+
+          <button class="modal-form-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
