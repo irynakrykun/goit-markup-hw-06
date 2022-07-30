@@ -486,7 +486,7 @@ address .link:focus {
   color: var(--primery-bgc-color);
 }
 .footer-form {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .form-text {
   font-style: normal;
@@ -500,19 +500,21 @@ address .link:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 10px 28px;
   width: 200px;
   height: 50px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   color: var(--primery-bgc-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   margin-left: 12px;
+  border: none;
 }
 
 .footer-icon-form {
@@ -553,7 +555,7 @@ address .link:focus {
   pointer-events: none;
 }
 .modal {
-  padding: 40px 40px;
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -605,9 +607,6 @@ address .link:focus {
 }
 
 .modal-registration-form {
-  width: 100%;
-  display: block;
-
   margin-bottom: 20px;
 }
 
@@ -619,12 +618,12 @@ address .link:focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .form-group {
   display: block;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .form-group:last-child {
@@ -655,9 +654,12 @@ address .link:focus {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: fill var(--animation), border var(--animation);
+  transition: fill var(--animation), border-color var(--animation);
 }
-
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--accent-color);
+}
 .form-input:focus + .form-icon,
 .form-input:hover + .form-icon {
   fill: var(--accent-color);
@@ -670,16 +672,26 @@ address .link:focus {
 
   fill: var(--title-text-color);
 }
-.form-coment {
-  display: inline-block;
+textarea {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-  outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  color: rgba(117, 117, 117, 0.5);
+  resize: none;
+  outline: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  transition: border-color var(--animation);
+}
+textarea:hover,
+textarea:focus {
+  border-color: var(--accent-color);
 }
 .checkbox-label {
   display: flex;
@@ -720,6 +732,7 @@ address .link:focus {
   font-size: 16px;
   line-height: 1.88;
   align-items: center;
+  letter-spacing: 0.06em;
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;

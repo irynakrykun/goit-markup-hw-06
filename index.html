@@ -548,17 +548,19 @@
           </ul>
         </div>
 
-        <form class="footer-form">
+        <div class="footer-form">
           <p class="form-text">Подпишитесь на рассылку</p>
-          <label class="visually-hidden" for="email">Почта</label>
-          <input class="form-email" type="email" name="E-mail" id="email" placeholder="E-mail" />
-          <button type="submit" class="footer-button">
-            Подписаться
-            <svg class="footer-icon-form" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
+          <form>
+            <label class="visually-hidden" for="email">Почта</label>
+            <input class="form-email" type="email" name="E-mail" id="email" placeholder="E-mail" />
+            <button type="submit" class="footer-button">
+              Подписаться
+              <svg class="footer-icon-form" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!--Modal window-->
@@ -598,12 +600,7 @@
             </label>
             <label class="form-group">
               <span class="form-label">Коментар</span>
-              <textarea
-                сlass="form-coment"
-                name="coment"
-                rows="5"
-                placeholder="Введите текст"
-              ></textarea>
+              <textarea name="coment" rows="5" placeholder="Введите текст"></textarea>
             </label>
           </div>
 
